@@ -1,0 +1,90 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+\title{Meta-CY Quantum Computing: Spectral Graphs on Calabi--Yau Manifolds}
+\author{Evgeny Monakhov \\ VOSCOM Research Initiative}
+\date{2025}
+
+\begin{document}
+\maketitle
+
+\section*{1. Central Idea}
+This work introduces a computational framework in which 
+information carriers are defined not only as qubits or qudits 
+but as wavefunctions on Calabi--Yau (CY) manifolds. 
+The approach combines CY geometry with spectral graph theory.
+
+\subsection*{1.1 CYbit}
+For a Calabi--Yau manifold $M$ of complex dimension $k$, 
+a \emph{CYbit} is defined as
+\begin{equation}
+\psi \in L^2(M, \mathbb{C}^d),
+\end{equation}
+with $d$ being the local dimension (qudit-like). 
+
+\subsection*{1.2 CY Graphs}
+A system of CYbits can be represented by a graph $G=(V,E)$ 
+embedded in $M$. Edge weights are determined by distances 
+and topological cycles:
+\begin{equation}
+w_{ij} = f(\mathrm{dist}_M(p_i,p_j), \mathrm{Top}(M)).
+\end{equation}
+
+\subsection*{1.3 Spectral Laplacian}
+The Laplacian on such a graph encodes 
+both metric and topological properties of $M$. 
+Eigenvalues and eigenvectors define 
+possible energy states and transitions.
+
+\section*{2. Motivation}
+\begin{itemize}
+  \item Classical computers: bounded by $10^{12}$ ops/s.
+  \item Quantum computers: $2^n$ states from qubits.
+  \item Qudits: $d^n$ states with $d > 2$.
+  \item CYbits: exponential extension via CY structure.
+\end{itemize}
+
+\section*{3. Formal Structure}
+\begin{itemize}
+  \item Hilbert space: $L^2(M, \mathbb{C}^d)$.
+  \item Graph representation: adjacency operator $A$.
+  \item Hamiltonian:
+  \[
+  H = -\Delta_{CY} + V + H_{\text{int}}
+  \]
+  where $\Delta_{CY}$ is the Laplacian on CY.
+\end{itemize}
+
+\section*{4. Scaling Potential}
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+System & Local dimension & $n=10$ sites \\
+\hline
+Qubits (2D) & 2 & $2^{10} \sim 10^3$ \\
+Qudits ($d=10$) & 10 & $10^{10}$ \\
+CY-3D ($m=10$) & $10^3$ & $10^{30}$ \\
+CY-6D ($m=10$) & $10^6$ & $10^{60}$ \\
+\hline
+\end{tabular}
+\end{center}
+
+\section*{5. Research Roadmap}
+\begin{enumerate}
+  \item Theoretical definitions: CYbits, CYlinks, Laplacians.
+  \item Mathematics: mirror symmetry, invariants, topology of CY.
+  \item Simulations: spectral numerics for torus $T^2$, $T^3$.
+  \item Experimental: prototypes with $d=3-5$ photonic or ion states.
+  \item Long-term: scalable CY quantum computation.
+\end{enumerate}
+
+\section*{6. Conclusion}
+This proposal formulates a new paradigm of quantum information: 
+\emph{Meta-CY Quantum Computing}. 
+It unites CY geometry, topology, and spectral graphs 
+to vastly extend computational capacity.
+
+\end{document}
