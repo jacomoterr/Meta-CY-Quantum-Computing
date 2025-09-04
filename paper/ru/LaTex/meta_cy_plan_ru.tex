@@ -1,0 +1,122 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage{amsmath,amssymb}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+\usepackage{hyperref}
+
+\title{План исследований по развитию теории Meta-CY квантовых вычислений}
+\author{Евгений Монахов \\ LCC "VOSCOM ONLINE" Research Initiative \\ 
+\href{https://orcid.org/0009-0003-1773-5476}{ORCID: 0009-0003-1773-5476}}
+\date{2025}
+
+\begin{document}
+\maketitle
+
+\section*{Введение}
+Представленная программа исследований направлена на систематическое развитие теории
+Meta-CY квантовых вычислений, где носителями информации выступают состояния на многообразиях Калаби--Яу (CY),
+а операции включают спектральные, топологические и функциональные преобразования.  
+
+\section{Основные направления исследований}
+
+\subsection{CY-Time: время как поток Риччи}
+\begin{itemize}
+\item Модель: 
+\[
+\frac{\partial g_{i\bar{j}}}{\partial \tau} = - \mathrm{Ric}(g)_{i\bar{j}}.
+\]
+\item Задача: описать время как проекцию внутренней динамики CY.  
+\item Перспектива: построение предсказательных моделей эволюции.  
+\end{itemize}
+
+\subsection{Коды коррекции ошибок на основе CY-гомологии}
+\begin{itemize}
+\item Модель кодов:
+\[
+[[n,k,d]], \quad d = \min\{\text{размер нетривиального цикла}\}.
+\]
+\item Задача: построение новых семейств устойчивых квантовых кодов.  
+\item Перспектива: обобщение торического кода на многомерные CY.  
+\end{itemize}
+
+\subsection{Спектральные свойства CY-графов}
+\begin{itemize}
+\item Дискретный лапласиан:
+\[
+(Lf)(p_i) = \sum_{j:(i,j)\in E} w_{ij}(f(p_i)-f(p_j)).
+\]
+\item Гипотеза: спектр отражает числа Ходжа $(h^{1,1},h^{2,1})$ и эйлерову характеристику $\chi(M)$.  
+\item Перспектива: новая связь спектральной геометрии и алгебраической топологии.  
+\end{itemize}
+
+\subsection{Вычислительная ёмкость CY-многообразий}
+\begin{itemize}
+\item Определение:
+\[
+\mathcal{C}(M) = \log \dim_{\mathrm{eff}}(\mathcal{H}_{CY}).
+\]
+\item Гипотеза:
+\[
+\mathcal{C}(M) \sim f(h^{1,1}, h^{2,1}, \chi(M)).
+\]
+\item Перспектива: количественная теория вычислительной мощности CYбитов.  
+\end{itemize}
+
+\subsection{CYlinks и CYgluons}
+\begin{itemize}
+\item CYlink:
+\[
+H_{link}(i,j) = w_{ij}\,\psi^\dagger(p_i)\psi(p_j) + h.c.
+\]
+\item CYgluon:
+\[
+H_{gluon}((i,j),(k,l)) = g_{ijkl}\,\psi^\dagger(p_i)\psi(p_j)\psi^\dagger(p_k)\psi(p_l).
+\]
+\item Перспектива: построение новых архитектур вычислений с многоуровневыми взаимодействиями.  
+\end{itemize}
+
+\subsection{Мета-CYбиты как функционалы}
+\begin{itemize}
+\item Определение:
+\[
+\Psi \in L^2(\mathcal{H}_{CY}, \mathcal{D}\psi).
+\]
+\item Задача: описать вычисления на уровне пространств состояний.  
+\item Перспектива: гипервычисления за пределами BQP.  
+\end{itemize}
+
+\subsection{Зеркальная симметрия как вычислительная двойственность}
+\begin{itemize}
+\item Задача: формализовать зеркальную симметрию как преобразование вычислений.  
+\item Перспектива: алгоритмические двойственности и перевод задач между режимами.  
+\end{itemize}
+
+\subsection{Фазы в сетях CY-квантов}
+\begin{itemize}
+\item Задача: исследовать коллективное поведение сетей CYбитов.  
+\item Перспектива: появление новых вычислительных фаз (аналог конденсата Бозе или сверхпроводимости).  
+\end{itemize}
+
+\section{Заключение}
+Предложенный план охватывает как математические, так и вычислительные аспекты.
+Его реализация позволит создать строгую теорию Meta-CY квантовых вычислений
+и выявить новые архитектуры с уникальными свойствами устойчивости и мощности.  
+
+\section*{Citation (BibTeX - EN)}
+\begin{verbatim}
+@misc{CY_links_gluons_2025,
+  author       = {Evgeny Monakhov and LCC "VOSCOM ONLINE" Research Initiative},
+  title        = {CYlinks and CYgluons: Interactions in Meta-Quantum Computing},
+  year         = {2025},
+  publisher    = {Zenodo},
+  doi          = {10.5281/zenodo.17050353},
+  url          = {https://doi.org/10.5281/zenodo.17050353},
+  orcid        = {0009-0003-1773-5476},
+  url_orcid    = {https://orcid.org/0009-0003-1773-5476},
+  organization = {https://voscom.online/}
+}
+\end{verbatim}
+
+\end{document}

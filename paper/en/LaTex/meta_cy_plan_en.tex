@@ -1,0 +1,106 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+\usepackage{hyperref}
+
+\title{Research Roadmap for Meta-CY Quantum Computing}
+\author{Evgeny Monakhov \\ LCC "VOSCOM ONLINE" Research Initiative \\ 
+\href{https://orcid.org/0009-0003-1773-5476}{ORCID: 0009-0003-1773-5476}}
+\date{2025}
+
+\begin{document}
+\maketitle
+
+\section*{Introduction}
+This roadmap outlines the development of the Meta-CY Quantum Computing framework,
+where information carriers are defined as quantum states on Calabi--Yau (CY) manifolds,
+and operations involve spectral, topological, and functional transformations.  
+
+\section{Main Research Directions}
+
+\subsection{CY-Time: Ricci Flow as Computation}
+\begin{itemize}
+\item Model:
+\[
+\frac{\partial g_{i\bar{j}}}{\partial \tau} = - \mathrm{Ric}(g)_{i\bar{j}}.
+\]
+\item Goal: describe time as projection of internal CY dynamics.  
+\item Perspective: predictive models of evolution.  
+\end{itemize}
+
+\subsection{Error-Correcting Codes from CY Homology}
+\begin{itemize}
+\item Code model:
+\[
+[[n,k,d]], \quad d = \min\{\text{size of nontrivial cycle}\}.
+\]
+\item Goal: construct new families of robust quantum codes.  
+\item Perspective: generalization of toric codes to higher-dimensional CYs.  
+\end{itemize}
+
+\subsection{Spectral Properties of CY Graphs}
+\begin{itemize}
+\item Discrete Laplacian:
+\[
+(Lf)(p_i) = \sum_{j:(i,j)\in E} w_{ij}(f(p_i)-f(p_j)).
+\]
+\item Hypothesis: spectrum encodes Hodge numbers $(h^{1,1},h^{2,1})$ and Euler characteristic $\chi(M)$.  
+\item Perspective: new link between spectral geometry and algebraic topology.  
+\end{itemize}
+
+\subsection{Computational Capacity of CY Manifolds}
+\begin{itemize}
+\item Definition:
+\[
+\mathcal{C}(M) = \log \dim_{\mathrm{eff}}(\mathcal{H}_{CY}).
+\]
+\item Hypothesis:
+\[
+\mathcal{C}(M) \sim f(h^{1,1}, h^{2,1}, \chi(M)).
+\]
+\item Perspective: quantitative theory of computational power of CYbits.  
+\end{itemize}
+
+\subsection{CYlinks and CYgluons}
+\begin{itemize}
+\item CYlink:
+\[
+H_{link}(i,j) = w_{ij}\,\psi^\dagger(p_i)\psi(p_j) + h.c.
+\]
+\item CYgluon:
+\[
+H_{gluon}((i,j),(k,l)) = g_{ijkl}\,\psi^\dagger(p_i)\psi(p_j)\psi^\dagger(p_k)\psi(p_l).
+\]
+\item Perspective: novel architectures of computation with multi-level interactions.  
+\end{itemize}
+
+\subsection{Meta-CYbits as Functionals}
+\begin{itemize}
+\item Definition:
+\[
+\Psi \in L^2(\mathcal{H}_{CY}, \mathcal{D}\psi).
+\]
+\item Goal: describe computation at the level of spaces of states.  
+\item Perspective: hypercomputation beyond BQP.  
+\end{itemize}
+
+\subsection{Mirror Symmetry as Computational Duality}
+\begin{itemize}
+\item Goal: formalize mirror symmetry as transformation of computations.  
+\item Perspective: dual algorithms and translation of problems across regimes.  
+\end{itemize}
+
+\subsection{Emergent Phases in CY Quantum Networks}
+\begin{itemize}
+\item Goal: investigate collective behavior in CYbit networks.  
+\item Perspective: emergence of computational phases (analogs of Bose condensation or superconductivity).  
+\end{itemize}
+
+\section{Conclusion}
+The proposed roadmap integrates mathematical and computational aspects.
+Its realization will provide a rigorous theory of Meta-CY Quantum Computing
+and uncover new architectures with unique stability and computational capacity.  
+
+\end{document}
