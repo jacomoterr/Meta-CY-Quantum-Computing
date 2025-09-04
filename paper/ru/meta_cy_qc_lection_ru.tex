@@ -1,0 +1,148 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T2A]{fontenc}
+\usepackage[russian]{babel}
+\usepackage{amsmath,amssymb}
+\usepackage{hyperref}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+\title{Мета-квантовые вычисления на многообразиях Калаби--Яу. Лекция.\\
+от кудитов к CYбитам и Мета-CYбитам}
+\author{[Евгений Монахов] \\ LCC "VOSCOM ONLINE" Research Initiative \\ https://orcid.org/0009-0003-1773-5476}
+\date{Сентябрь 2025}
+
+\begin{document}
+\maketitle
+
+\section*{Вступление}
+Добрый день, коллеги. Сегодня я расскажу о концепции, которая расширяет 
+современное понимание квантовых вычислений. 
+Мы начнём с привычного --- бита и кубита --- и шаг за шагом поднимемся 
+к новой вычислительной единице: \emph{CYбиту}, основанному на многообразиях 
+Калаби--Яу. Затем мы сделаем ещё один шаг и введём \emph{Мета-CYбит} --- 
+объект, который живёт в пространстве волновых функционалов. 
+Таким образом, мы получаем систему, где квантовые принципы 
+«вшиты» в саму структуру вычислений.
+
+\section{От бита к кубиту}
+Классический бит определяется как
+\[
+x \in \{0,1\}.
+\]
+Кубит описывается как суперпозиция:
+\[
+|\psi\rangle = \alpha|0\rangle + \beta|1\rangle, \qquad 
+|\alpha|^2 + |\beta|^2 = 1.
+\]
+$n$ кубитов образуют пространство размерности $2^n$.
+
+\section{Кудиты}
+Обобщение кубита до $d$ измерений:
+\[
+|\psi\rangle = \sum_{i=1}^d \alpha_i |i\rangle, 
+\qquad \sum_{i=1}^d |\alpha_i|^2 = 1.
+\]
+Кудиты позволяют хранить больше информации в одной ячейке 
+и сокращать глубину квантовых схем.
+
+\section{CYбит}
+Пусть $M$ --- многообразие Калаби--Яу размерности $k$.
+Мы определяем CYбит как сечение:
+\[
+\psi: M \to \mathbb{C}^d, \quad \psi(p)=(\psi_1(p),\dots,\psi_d(p)).
+\]
+Скалярное произведение:
+\[
+\langle \psi,\phi \rangle = \int_M \psi^\dagger(p)\phi(p)\, d\mu(p).
+\]
+Таким образом,
+\[
+\mathcal{H}_{CY} = L^2(M,\mathbb{C}^d).
+\]
+
+\section{CYlink и CYgluon}
+Связь между CYбитами:
+\[
+H = \sum_{(p,q)\in E} w_{pq} e^{i\phi_{pq}} 
+U_{pq} \otimes |p\rangle\langle q| + \text{h.c.}
+\]
+Параметры:
+\begin{itemize}
+\item $w_{pq}$ --- вес связи (метрика CY),
+\item $\phi_{pq}$ --- фаза (интеграл Berry),
+\item $U_{pq}$ --- оператор перехода.
+\end{itemize}
+Мы также вводим \emph{CYgluon} --- объект, описывающий взаимодействие связей:
+\[
+\hat{\mathcal{G}}(L_1,L_2) \sim g \int \Psi[\psi]\,F[L_1,L_2;\psi]\,\mathcal{D}\psi.
+\]
+
+\section{Мета-CYбит}
+Ключевой шаг --- повторное квантование.
+CYбит живёт в $\mathcal{H}_{CY}$.
+Теперь вводим \emph{волновой функционал}:
+\[
+\Psi[\psi] \in L^2(\mathcal{H}_{CY},\mathcal{D}\psi).
+\]
+Нормировка:
+\[
+\int |\Psi[\psi]|^2 \,\mathcal{D}\psi = 1.
+\]
+Эволюция описывается функциональным уравнением Шрёдингера:
+\[
+i\hbar \frac{\partial}{\partial t} \Psi[\psi] 
+= \hat{\mathcal{H}} \Psi[\psi].
+\]
+
+\section{Сравнение уровней}
+\begin{tabular}{|c|c|c|}
+\hline
+Уровень & Объект & Пространство состояний \\
+\hline
+0 & Бит & $\{0,1\}$ \\
+1 & Кубит/Кудит & $\mathbb{C}^d$ \\
+2 & CYбит & $\mathcal{H}_{CY} = L^2(M,\mathbb{C}^d)$ \\
+3 & Мета-CYбит & $\mathcal{H}_{Meta} = L^2(\mathcal{H}_{CY},\mathcal{D}\psi)$ \\
+\hline
+\end{tabular}
+
+\section{Вычислительный потенциал}
+Примерные оценки:
+\begin{itemize}
+\item Классический ПК: $10^{12}$ операций/с.
+\item 50 кубитов: $\sim 10^{15}$ амплитуд.
+\item 10 CYбитов (3D, $m=10$): $10^{30}$ амплитуд.
+\item 10 CYбитов (6D, $m=10$): $10^{60}$ амплитуд.
+\item Мета-CYбит: суперэкспоненциальное пространство функционалов.
+\end{itemize}
+
+\section{Последствия}
+\textbf{Математика:} вычислительная геометрия Калаби--Яу. \\
+\textbf{Физика:} новые применения CY вне космологии. \\
+\textbf{Информатика:} новая парадигма мета-квантовых вычислений. \\
+\textbf{ИИ:} потенциальные новые архитектуры для обучения и моделирования.
+
+\section*{Заключение}
+Мы прошли путь: бит $\to$ кубит $\to$ кудит $\to$ CYбит $\to$ Мета-CYбит.  
+Эта иерархия открывает новый класс вычислительных моделей, 
+где квантовые принципы встроены в саму структуру архитектуры. 
+Дальнейшие исследования могут привести к созданию устройств, 
+работающих в пространствах, которые мы пока только начинаем постигать.
+
+\section*{Citation (BibTeX - EN)}
+\begin{verbatim}
+@misc{CY_meta_quantum_2025,
+  author       = {Evgeny Monakhov and LCC "VOSCOM ONLINE" Research Initiative},
+  title        = {Meta-Quantum Computing on Calabi--Yau Manifolds},
+  year         = {2025},
+  publisher    = {Zenodo},
+  doi          = {10.5281/zenodo.17050352},
+  url          = {https://doi.org/10.5281/zenodo.17050352}
+  orcid		   = {0009-0003-1773-5476}
+  url_orcid     = {https://orcid.org/0009-0003-1773-5476}
+  organization = {https://voscom.online/}
+}
+\end{verbatim}
+
+\end{document}

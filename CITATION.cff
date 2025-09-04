@@ -3,7 +3,7 @@ message: "If you use this work, please cite it as below."
 authors:
   - family-names: "Monakhov"
     given-names: "Evgeny"
-    affiliation: "VOSCOM ONLINE Research Initiative"
+    affiliation: "LLC "VOSCOM ONLINE" Research Initiative"
 title: "Spectral Graphs on Calabi--Yau Manifolds (Meta-CY Quantum Computing)"
 version: "0.1.0"
 doi: "10.5281/zenodo.17050352"
@@ -23,17 +23,21 @@ preferred-citation:
   authors:
     - family-names: "Monakhov"
       given-names: "Evgeny"
-      affiliation: "VOSCOM ONLINE Research Initiative"
-  title: "Spectral Graphs on Calabi--Yau Manifolds"
+      affiliation: "LLC "VOSCOM ONLINE" Research Initiative"
+  title: "Spectral Graphs on Calabi--Yau Manifolds (Meta-CY Quantum Computing)"
   year: 2025
   doi: "10.5281/zenodo.17050352"
   url: "https://doi.org/10.5281/zenodo.17050352"
+  
   bibtex: |
     @misc{cy_spectral_graphs_2025,
-      author       = {Evgeny Monakhov and VOSCOM ONLINE Research Initiative},
+      author       = {Evgeny Monakhov and LLC "VOSCOM ONLINE" Research Initiative},
       title        = {Spectral Graphs on Calabi--Yau Manifolds},
       year         = {2025},
       publisher    = {Zenodo},
       doi          = {10.5281/zenodo.17050352},
       url          = {https://doi.org/10.5281/zenodo.17050352}
+	  orcid		   = {0009-0003-1773-5476}
+	  url_orcid     = {https://orcid.org/0009-0003-1773-5476}
+	  firm			={https://voscom.online/
     }

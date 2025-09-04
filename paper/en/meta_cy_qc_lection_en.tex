@@ -1,0 +1,147 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb}
+\usepackage{hyperref}
+\usepackage{geometry}
+\usepackage{verbatim} % for citation block
+\geometry{margin=2.5cm}
+
+\title{Meta-Quantum Computing on Calabi--Yau Manifolds. Lecture.\\
+From Qudits to CYbits and Meta-CYbits}
+\author{Evgeny Monakhov \\ LCC "VOSCOM ONLINE" Research Initiative \\ https://orcid.org/0009-0003-1773-5476}
+\date{September 2025}
+
+\begin{document}
+\maketitle
+
+\section*{Introduction}
+Good afternoon, colleagues. Today I will present a concept that extends the 
+current understanding of quantum computing. 
+We begin with the familiar --- the bit and the qubit --- and then move step by step 
+towards a new computational unit: the \emph{CYbit}, based on Calabi--Yau 
+manifolds. We will then take another step and introduce the \emph{Meta-CYbit} --- 
+an object that lives in the space of wave functionals. 
+In this way, we obtain a system where quantum principles are 
+“built into” the very structure of computation.
+
+\section{From Bit to Qubit}
+The classical bit is defined as
+\[
+x \in \{0,1\}.
+\]
+A qubit is described as a superposition:
+\[
+|\psi\rangle = \alpha|0\rangle + \beta|1\rangle, \qquad 
+|\alpha|^2 + |\beta|^2 = 1.
+\]
+$n$ qubits span a Hilbert space of dimension $2^n$.
+
+\section{Qudits}
+The generalization of a qubit to $d$ dimensions:
+\[
+|\psi\rangle = \sum_{i=1}^d \alpha_i |i\rangle, 
+\qquad \sum_{i=1}^d |\alpha_i|^2 = 1.
+\]
+Qudits allow storing more information in a single cell 
+and reduce the depth of quantum circuits.
+
+\section{CYbit}
+Let $M$ be a Calabi--Yau manifold of complex dimension $k$.
+We define a CYbit as a section:
+\[
+\psi: M \to \mathbb{C}^d, \quad \psi(p)=(\psi_1(p),\dots,\psi_d(p)).
+\]
+The inner product:
+\[
+\langle \psi,\phi \rangle = \int_M \psi^\dagger(p)\phi(p)\, d\mu(p).
+\]
+Thus,
+\[
+\mathcal{H}_{CY} = L^2(M,\mathbb{C}^d).
+\]
+
+\section{CYlink and CYgluon}
+The interaction between CYbits:
+\[
+H = \sum_{(p,q)\in E} w_{pq} e^{i\phi_{pq}} 
+U_{pq} \otimes |p\rangle\langle q| + \text{h.c.}
+\]
+Parameters:
+\begin{itemize}
+\item $w_{pq}$ --- link weight (CY metric),
+\item $\phi_{pq}$ --- phase (Berry integral),
+\item $U_{pq}$ --- transition operator.
+\end{itemize}
+We also introduce the \emph{CYgluon} --- an object describing link interactions:
+\[
+\hat{\mathcal{G}}(L_1,L_2) \sim g \int \Psi[\psi]\,F[L_1,L_2;\psi]\,\mathcal{D}\psi.
+\]
+
+\section{Meta-CYbit}
+The key step is \emph{second quantization}.
+A CYbit lives in $\mathcal{H}_{CY}$.
+Now we introduce a \emph{wave functional}:
+\[
+\Psi[\psi] \in L^2(\mathcal{H}_{CY},\mathcal{D}\psi).
+\]
+Normalization:
+\[
+\int |\Psi[\psi]|^2 \,\mathcal{D}\psi = 1.
+\]
+The evolution is described by a functional Schrödinger equation:
+\[
+i\hbar \frac{\partial}{\partial t} \Psi[\psi] 
+= \hat{\mathcal{H}} \Psi[\psi].
+\]
+
+\section{Comparison of Levels}
+\begin{tabular}{|c|c|c|}
+\hline
+Level & Object & State Space \\
+\hline
+0 & Bit & $\{0,1\}$ \\
+1 & Qubit/Qudit & $\mathbb{C}^d$ \\
+2 & CYbit & $\mathcal{H}_{CY} = L^2(M,\mathbb{C}^d)$ \\
+3 & Meta-CYbit & $\mathcal{H}_{Meta} = L^2(\mathcal{H}_{CY},\mathcal{D}\psi)$ \\
+\hline
+\end{tabular}
+
+\section{Computational Potential}
+Approximate estimates:
+\begin{itemize}
+\item Classical PC: $10^{12}$ operations/s.
+\item 50 qubits: $\approx 10^{15}$ amplitudes.
+\item 10 CYbits (3D, $m=10$): $\approx 10^{30}$ amplitudes.
+\item 10 CYbits (6D, $m=10$): $\approx 10^{60}$ amplitudes.
+\item Meta-CYbit: super-exponential functional space.
+\end{itemize}
+
+\section{Implications}
+\textbf{Mathematics:} computational geometry of Calabi--Yau. \\
+\textbf{Physics:} new applications of CY beyond cosmology. \\
+\textbf{Computer Science:} a new paradigm of meta-quantum computing. \\
+\textbf{AI:} potential new architectures for learning and modeling.
+
+\section*{Conclusion}
+We have traced the path: bit $\to$ qubit $\to$ qudit $\to$ CYbit $\to$ Meta-CYbit.  
+This hierarchy opens a new class of computational models, 
+where quantum principles are embedded into the very structure of the architecture. 
+Further research may lead to devices that operate in spaces 
+we are only beginning to explore.
+
+\section*{Citation (BibTeX)}
+\begin{verbatim}
+@misc{CY_meta_quantum_2025,
+  author       = {Evgeny Monakhov and LCC "VOSCOM ONLINE" Research Initiative},
+  title        = {Meta-Quantum Computing on Calabi--Yau Manifolds},
+  year         = {2025},
+  publisher    = {Zenodo},
+  doi          = {10.5281/zenodo.17050352},
+  url          = {https://doi.org/10.5281/zenodo.17050352}
+  orcid		   = {0009-0003-1773-5476}
+  url_orcid     = {https://orcid.org/0009-0003-1773-5476}
+  organization = {https://voscom.online/}
+}
+\end{verbatim}
+
+\end{document}

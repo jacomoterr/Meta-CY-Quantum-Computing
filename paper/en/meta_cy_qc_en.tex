@@ -1,0 +1,157 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb}
+\usepackage{hyperref}
+\usepackage{geometry}
+\usepackage{verbatim} % for citation block
+\geometry{margin=2.5cm}
+
+\title{Spectral Graphs on Calabi--Yau Manifolds: \\
+A Research Hypothesis and Program}
+\author{[Your Name] \\ LCC "VOSCOM ONLINE" Research Initiative \\ https://orcid.org/0009-0003-1773-5476}
+\date{September 2025}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This paper presents a research hypothesis and program concerning 
+the spectral properties of graphs derived from Calabi--Yau (CY) manifolds. 
+The central claim is that discrete Laplacians on CY graphs capture 
+nontrivial topological and geometric information 
+related to Hodge numbers and Euler characteristics. 
+We propose a systematic study of CY-inspired spectral models 
+as a step toward building the theory of CYbits and 
+their meta-quantum extensions. 
+Although the present work does not include numerical experiments, 
+it establishes the theoretical framework and outlines 
+a detailed roadmap of research tasks.
+\end{abstract}
+
+\section{Introduction and Motivation}
+Studying computation in higher-dimensional frameworks 
+can provide new insights into lower-dimensional models. 
+Calabi--Yau manifolds are well known from string theory 
+and complex geometry as rich mathematical structures 
+with highly constrained topology. 
+We hypothesize that spectral graph theory on discretizations of CY spaces 
+can reveal computational features not accessible in ordinary Euclidean settings.
+This document should be read as a programmatic research note: 
+it makes conjectures and proposes a systematic plan for verification.
+
+\section{Definitions and Setup}
+Let $M$ be a Calabi--Yau manifold of complex dimension $k$.  
+We define a discretization $\{p_1,\dots,p_N\}\subset M$ 
+with edges given by $k$-nearest neighbors.  
+The discrete Laplacian is
+\[
+(Lf)(p_i) = \sum_{j:(i,j)\in E} w_{ij}(f(p_i)-f(p_j)),
+\]
+where $w_{ij}$ depends on the CY metric.
+We are interested in the spectrum $\{\lambda_\alpha\}$ of $L$ 
+and its large-$N$ asymptotics.
+
+\section{Central Hypothesis}
+We conjecture that:
+\begin{itemize}
+\item The eigenvalue distribution of $L$ converges, as $N\to\infty$, 
+to the spectrum of the Laplace--Beltrami operator on $M$.  
+\item Spectral gaps and degeneracies encode information about 
+the Hodge numbers $(h^{1,1}, h^{2,1})$ of $M$.  
+\item These spectral features can be used to define 
+a \emph{computational capacity} $\mathcal{C}(M)$ 
+for CY-inspired quantum models.  
+\end{itemize}
+
+\section{Research Program}
+The proposed research program is structured into several stages:
+
+\subsection{Stage 1: Discretization Methods}
+\begin{enumerate}
+\item Develop numerical discretizations of simple Calabi--Yau spaces: 
+2-torus $T^2$, 3-torus $T^3$, and the K3 surface.  
+\item Implement both random sampling and lattice-based point sets.  
+\item Define edge weights using approximate Ricci-flat metrics 
+(as in Donaldson’s algorithm).  
+\end{enumerate}
+
+\subsection{Stage 2: Spectral Analysis}
+\begin{enumerate}
+\item Compute spectra of discrete Laplacians for increasing $N$.  
+\item Study convergence properties toward continuum spectra.  
+\item Analyze spectral density, spectral gaps, and degeneracy patterns.  
+\end{enumerate}
+
+\subsection{Stage 3: Topological Correspondence Tests}
+\begin{enumerate}
+\item Compare degeneracy structures with known Hodge numbers.  
+\item Explore correlations between low-lying eigenvalues 
+and Euler characteristics.  
+\item Test robustness of these correspondences 
+under different discretization schemes.  
+\end{enumerate}
+
+\subsection{Stage 4: Computational Interpretation}
+\begin{enumerate}
+\item Define and refine the notion of \emph{computational capacity} $\mathcal{C}(M)$ 
+as a function of spectral invariants.  
+\item Interpret $\mathcal{C}(M)$ in terms of possible quantum state encodings.  
+\item Explore the analogy with qubits and propose CYbits 
+as computational primitives.  
+\end{enumerate}
+
+\subsection{Stage 5: Toward Meta-CYbits}
+\begin{enumerate}
+\item Extend the framework to higher-dimensional Calabi--Yau 3-folds, 
+such as the quintic hypersurface in $\mathbb{CP}^4$.  
+\item Study spectral stability under deformations of complex structure.  
+\item Define Meta-CYbits as composite structures built from families of CYbits.  
+\end{enumerate}
+
+\section{Expected Impact}
+Confirming these hypotheses would establish 
+a quantitative link between CY topology and computational capacity. 
+This would form the first step in a larger program 
+leading to CYbits and Meta-CYbits, 
+providing a foundation for a new class of meta-quantum computation models.  
+
+\section*{Acknowledgements}
+The author thanks the VOSCOM Research Initiative 
+for providing the conceptual framework.
+
+\begin{thebibliography}{9}
+\bibitem{candelas1985}
+Candelas et al., ``Vacuum configurations for superstrings,'' 
+Nucl. Phys. B, 1985.
+\bibitem{exner2008}
+Exner, P., ``Quantum graphs: An introduction,'' 
+Annals of Physics, 2008.
+\bibitem{belhaj2014}
+Belhaj, A. et al., ``Qubits from Calabi--Yau manifolds and toric geometry,'' 
+arXiv:1408.3952, 2014.
+\bibitem{donaldson2005}
+Donaldson, S.K., ``Numerical results on Calabi--Yau metrics,'' 
+Class. Quantum Grav., 2005.
+\bibitem{chung1997}
+Chung, F., ``Spectral Graph Theory,'' 
+CBMS Regional Conference Series in Mathematics, 1997.
+\end{thebibliography}
+
+\section*{Citation (BibTeX - EN)}
+\begin{verbatim}
+@misc{CY_meta_quantum_2025,
+  author       = {Evgeny Monakhov and LCC "VOSCOM ONLINE" Research Initiative},
+  title        = {Meta-Quantum Computing on Calabi--Yau Manifolds},
+  year         = {2025},
+  publisher    = {Zenodo},
+  doi          = {10.5281/zenodo.17050352},
+  url          = {https://doi.org/10.5281/zenodo.17050352}
+  orcid		   = {0009-0003-1773-5476}
+  url_orcid     = {https://orcid.org/0009-0003-1773-5476}
+  organization = {https://voscom.online/}
+}
+}
+\end{verbatim}
+
+
+\end{document}
