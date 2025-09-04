@@ -1,0 +1,121 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage{amsmath,amssymb}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+\usepackage{hyperref}
+
+\title{CYlinks и CYgluons: взаимодействия в мета-квантовых вычислениях}
+\author{Евгений Монахов \\ LCC "VOSCOM ONLINE" Research Initiative \\ 
+\href{https://orcid.org/0009-0003-1773-5476}{ORCID: 0009-0003-1773-5476}}
+\date{2025}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Предлагается формальное описание структур \emph{CYlinks} и \emph{CYgluons}, 
+которые задают взаимодействия в рамках концепции Мета-CY квантовых вычислений.  
+CYlinks представляют собой связи между CYбитами, определяемые вложениями в 
+подпространства Калаби--Яу (CY), тогда как CYgluons описывают взаимодействия 
+между самими связями, аналогично глюонам в квантовой хромодинамике (QCD).  
+Приведены математические определения, операторные формализмы, 
+план исследований и перспективы вычислительных приложений.  
+\end{abstract}
+
+\section{Введение}
+В рамках Мета-CY квантовых вычислений CYбиты являются квантовыми состояниями, определёнными на многообразиях Калаби--Яу.  
+Для построения вычислений необходимо их взаимодействие.  
+Эти взаимодействия не ограничиваются парными связями, но могут сами образовывать 
+сети более высокого порядка динамики.  
+Мы называем такие структуры CYlinks (прямые связи) и CYgluons (взаимодействия между связями).  
+
+\section{Определение CYlinks}
+Пусть $M$ — многообразие Калаби--Яу, дискретизированное в виде графа $G=(V,E)$.  
+Для двух CYбитов в точках $p_i,p_j \in M$ определим CYlink как оператор
+\begin{equation}
+H_{link}(i,j) = w_{ij} \, \psi^\dagger(p_i)\psi(p_j) + h.c.,
+\end{equation}
+с весом
+\begin{equation}
+w_{ij} = f(\mathrm{dist}_M(p_i,p_j), \;\mathcal{T}_{ij}),
+\end{equation}
+где $\mathcal{T}_{ij}$ кодирует топологические данные вложенного подпространства.
+
+\subsection{Форма через графовый лапласиан}
+Полный гамильтониан связей может быть записан как:
+\begin{equation}
+H_{links} = \sum_{(i,j)\in E} w_{ij} ( \psi^\dagger(p_i)\psi(p_j) + h.c. ).
+\end{equation}
+Это обобщает стандартные взаимодействия по смежности на CY-зависимые веса.
+
+\section{CYgluons: взаимодействия между связями}
+CYlinks сами могут взаимодействовать, образуя связи более высокого порядка.  
+Определим оператор CYgluon, действующий на две связи $(i,j)$ и $(k,l)$:
+\begin{equation}
+H_{gluon}((i,j),(k,l)) = g_{ijkl} \, \psi^\dagger(p_i)\psi(p_j)\psi^\dagger(p_k)\psi(p_l),
+\end{equation}
+где
+\begin{equation}
+g_{ijkl} = g(\mathcal{T}_{ij}, \mathcal{T}_{kl}, \; \mathrm{Hom}(M)).
+\end{equation}
+Здесь $g_{ijkl}$ зависит от пересечений CY-подпространств и гомологических связей.  
+
+\subsection{Полный гамильтониан}
+Глобальный гамильтониан системы имеет вид:
+\begin{equation}
+H = \sum_i H_{CYbit}(i) + \sum_{(i,j)} H_{link}(i,j) + \sum_{(i,j),(k,l)} H_{gluon}((i,j),(k,l)).
+\end{equation}
+
+\section{План исследований}
+\subsection{Этап I: формализм CYlink}
+\begin{enumerate}
+\item Определить явные $w_{ij}$ для простых CY (торы $T^n$, K3).  
+\item Вычислить спектры гамильтонианов CYlinks.  
+\item Установить связь $w_{ij}$ с топологией CY.  
+\end{enumerate}
+
+\subsection{Этап II: структуры CYgluons}
+\begin{enumerate}
+\item Ввести $g_{ijkl}$ на основе пересечений CY-подпространств.  
+\item Проверить согласованность с калибровочными симметриями.  
+\item Изучить аналогию с цветовыми зарядами QCD.  
+\end{enumerate}
+
+\subsection{Этап III: объединённая динамика}
+\begin{enumerate}
+\item Смоделировать сети CYбитов с CYlinks и CYgluons.  
+\item Изучить устойчивость и свойства коррекции ошибок.  
+\item Исследовать возникающие вычислительные фазы.  
+\end{enumerate}
+
+\section{Перспективы}
+\begin{itemize}
+\item \textbf{Вычислительная мощность:} CYlinks и CYgluons дают новые структуры взаимодействия, усиливающие выразительные возможности.  
+\item \textbf{Коррекция ошибок:} связи CYgluon могут стабилизировать логические состояния через избыточность более высокого порядка.  
+\item \textbf{Физическая аналогия:} формальное сходство с теориями калибровочных полей указывает на возможное расширение к CY-группам калибровки.  
+\end{itemize}
+
+\section{Заключение}
+CYlinks и CYgluons расширяют модель Мета-CYбитов, вводя структурированные взаимодействия 
+между CYбитами и между их связями.  
+Это создаёт основу для новых квантовых вычислительных архитектур, 
+опирающихся на геометрию Калаби--Яу.  
+
+\section*{Цитирование (BibTeX - EN)}
+\begin{verbatim}
+@misc{CY_links_gluons_2025,
+  author       = {Evgeny Monakhov and LCC "VOSCOM ONLINE" Research Initiative},
+  title        = {CYlinks and CYgluons: Interactions in Meta-Quantum Computing},
+  year         = {2025},
+  publisher    = {Zenodo},
+  doi          = {10.5281/zenodo.17050353},
+  url          = {https://doi.org/10.5281/zenodo.17050353},
+  orcid        = {0009-0003-1773-5476},
+  url_orcid    = {https://orcid.org/0009-0003-1773-5476},
+  organization = {https://voscom.online/}
+}
+\end{verbatim}
+
+\end{document}

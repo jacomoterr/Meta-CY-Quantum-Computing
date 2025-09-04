@@ -1,0 +1,120 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+\usepackage{hyperref}
+
+\title{CYlinks and CYgluons: Interactions in Meta-Quantum Computing}
+\author{Evgeny Monakhov \\ LCC "VOSCOM ONLINE" Research Initiative \\ 
+\href{https://orcid.org/0009-0003-1773-5476}{ORCID: 0009-0003-1773-5476}}
+\date{2025}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We propose a formal description of \emph{CYlinks} and \emph{CYgluons}, 
+the interaction structures in the Meta-CY Quantum Computing framework.  
+CYlinks represent couplings between CYbits, defined by embeddings into 
+Calabi--Yau (CY) subspaces, while CYgluons describe higher-order 
+interactions between the links themselves, analogous to gluons in quantum chromodynamics (QCD).  
+We present mathematical definitions, operator formalisms, 
+research roadmap, and perspectives for computational applications.  
+\end{abstract}
+
+\section{Introduction}
+In the Meta-CY Quantum Computing framework, CYbits are quantum states defined on CY manifolds.  
+To build computation, CYbits must interact.  
+These interactions are not limited to pairwise couplings, but may themselves form 
+networks of higher-order dynamics.  
+We call these structures CYlinks (direct connections) and CYgluons (link-link interactions).  
+
+\section{Definition of CYlinks}
+Let $M$ be a CY manifold, discretized as a graph $G=(V,E)$.  
+For two CYbits at points $p_i,p_j \in M$, define a CYlink as an operator
+\begin{equation}
+H_{link}(i,j) = w_{ij} \, \psi^\dagger(p_i)\psi(p_j) + h.c.,
+\end{equation}
+with weight
+\begin{equation}
+w_{ij} = f(\mathrm{dist}_M(p_i,p_j), \;\mathcal{T}_{ij}),
+\end{equation}
+where $\mathcal{T}_{ij}$ encodes topological data of the embedding subspace.
+
+\subsection{Graph Laplacian Form}
+The total link Hamiltonian can be expressed as:
+\begin{equation}
+H_{links} = \sum_{(i,j)\in E} w_{ij} ( \psi^\dagger(p_i)\psi(p_j) + h.c. ).
+\end{equation}
+This generalizes standard adjacency-based interactions to CY-dependent weights.
+
+\section{CYgluons: Interactions Between Links}
+CYlinks themselves may interact, forming higher-order couplings.  
+Define a CYgluon operator acting on two links $(i,j)$ and $(k,l)$:
+\begin{equation}
+H_{gluon}((i,j),(k,l)) = g_{ijkl} \, \psi^\dagger(p_i)\psi(p_j)\psi^\dagger(p_k)\psi(p_l),
+\end{equation}
+where
+\begin{equation}
+g_{ijkl} = g(\mathcal{T}_{ij}, \mathcal{T}_{kl}, \; \mathrm{Hom}(M)).
+\end{equation}
+Here $g_{ijkl}$ depends on overlaps of CY subspaces and homological relations.  
+
+\subsection{Total Hamiltonian}
+The global system Hamiltonian is then
+\begin{equation}
+H = \sum_i H_{CYbit}(i) + \sum_{(i,j)} H_{link}(i,j) + \sum_{(i,j),(k,l)} H_{gluon}((i,j),(k,l)).
+\end{equation}
+
+\section{Research Roadmap}
+\subsection{Stage I: CYlink Formalism}
+\begin{enumerate}
+\item Define explicit $w_{ij}$ for simple CY (tori $T^n$, K3).  
+\item Compute spectra of CYlink Hamiltonians.  
+\item Relate $w_{ij}$ to CY topology.  
+\end{enumerate}
+
+\subsection{Stage II: CYgluon Structures}
+\begin{enumerate}
+\item Introduce $g_{ijkl}$ based on overlaps of CY subspaces.  
+\item Test consistency with gauge-like symmetries.  
+\item Explore analogy with QCD color charges.  
+\end{enumerate}
+
+\subsection{Stage III: Combined Dynamics}
+\begin{enumerate}
+\item Simulate CYbit networks with CYlinks and CYgluons.  
+\item Study stability and error correction properties.  
+\item Explore emergent computational phases.  
+\end{enumerate}
+
+\section{Perspectives}
+\begin{itemize}
+\item \textbf{Computational Power:} CYlinks and CYgluons provide new interaction structures, potentially enhancing expressive capacity.  
+\item \textbf{Error Correction:} CYgluon couplings may stabilize logical states via higher-order redundancies.  
+\item \textbf{Physics Analogy:} Formal similarity with gauge field theories suggests extensions to CY gauge groups.  
+\end{itemize}
+
+\section{Conclusion}
+CYlinks and CYgluons extend the Meta-CYbit model by introducing structured interactions 
+between CYbits and between their couplings.  
+This offers a foundation for novel quantum computational architectures 
+grounded in Calabi--Yau geometry.  
+
+\section*{Citation (BibTeX - EN)}
+\begin{verbatim}
+@misc{CY_links_gluons_2025,
+  author       = {Evgeny Monakhov and LCC "VOSCOM ONLINE" Research Initiative},
+  title        = {CYlinks and CYgluons: Interactions in Meta-Quantum Computing},
+  year         = {2025},
+  publisher    = {Zenodo},
+  doi          = {10.5281/zenodo.17050353},
+  url          = {https://doi.org/10.5281/zenodo.17050353},
+  orcid        = {0009-0003-1773-5476},
+  url_orcid    = {https://orcid.org/0009-0003-1773-5476},
+  organization = {https://voscom.online/}
+}
+\end{verbatim}
+
+\end{document}
