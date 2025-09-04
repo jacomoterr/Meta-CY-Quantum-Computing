@@ -1,0 +1,120 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+\usepackage{hyperref}
+
+\title{Meta-Quantum Computing on Calabi--Yau Manifolds \\ CYbit and MetaCYbit}
+\author{Evgeny Monakhov \\ LCC "VOSCOM ONLINE" Research Initiative \\ 
+\href{https://orcid.org/0009-0003-1773-5476}{ORCID: 0009-0003-1773-5476}}
+\date{2025}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This paper introduces a novel computational paradigm based on Calabi--Yau (CY) manifolds.
+We present a progression from classical bits to quantum qubits, higher-dimensional qudits,
+and then to CYbits --- quantum states defined on Calabi--Yau manifolds. 
+Finally, we introduce Meta-CYbits, functionals acting on entire CY Hilbert spaces. 
+We derive mathematical definitions, scaling estimates, and propose a roadmap 
+for further exploration of this new model of computation. 
+\end{abstract}
+
+\section{Introduction}
+Classical computation is based on bits, taking discrete values $0$ and $1$. 
+Quantum computation extends this to qubits, superpositions in a two-dimensional Hilbert space.
+Qudits generalize to dimension $d$, allowing states in $\mathbb{C}^d$. 
+We propose to further extend this hierarchy by defining CYbits --- 
+states defined on Calabi--Yau manifolds --- and Meta-CYbits, 
+which operate at the level of functional spaces. 
+
+\section{From Bits to Qubits}
+A classical bit:
+\[
+b \in \{0,1\}.
+\]
+A quantum bit (qubit):
+\[
+|\psi\rangle = \alpha |0\rangle + \beta |1\rangle, \quad \alpha,\beta \in \mathbb{C}, \; |\alpha|^2+|\beta|^2=1.
+\]
+
+\section{Qudits}
+Generalization to dimension $d$:
+\[
+|\psi\rangle = \sum_{i=0}^{d-1} \alpha_i |i\rangle, \quad \alpha_i \in \mathbb{C}, \quad \sum_{i=0}^{d-1}|\alpha_i|^2=1.
+\]
+
+\section{CYbits}
+Let $M$ be a Calabi--Yau manifold of complex dimension $k$.  
+Define a CYbit as:
+\[
+\psi(x) \in L^2(M,\mathbb{C}^d).
+\]
+Thus, information carriers are quantum states over CY geometry.  
+
+The Laplacian operator:
+\[
+(Lf)(p_i) = \sum_{j:(i,j)\in E} w_{ij}(f(p_i)-f(p_j)),
+\]
+encodes spectral and topological properties of $M$, 
+with eigenvalues conjectured to reflect Hodge numbers $(h^{1,1},h^{2,1})$ 
+and Euler characteristic $\chi(M)$.
+
+\section{Meta-CYbits}
+We define Meta-CYbits as functionals over CY Hilbert spaces:
+\[
+\Psi \in L^2(\mathcal{H}_{CY}, \mathcal{D}\psi),
+\]
+where $\mathcal{H}_{CY}$ is the Hilbert space of CYbit states.
+These represent computations over spaces of quantum states themselves.
+
+\section{Scaling of Computational Capacity}
+For $n$ information carriers:
+\begin{itemize}
+\item Classical bits: $2^n$ states.  
+\item Qubits: $2^n$-dimensional Hilbert space.  
+\item Qudits ($d$-level): $d^n$ states.  
+\item CYbits (dimension $m$ CY manifold, local $d$-level): 
+\[
+\sim (m^d)^n \quad \text{effective states}.
+\]
+\item Meta-CYbits: scaling extends to functional spaces, potentially 
+beyond hyper-exponential growth.
+\end{itemize}
+
+\section{Discussion and Research Directions}
+\begin{enumerate}
+\item Spectral analysis: relation between Laplacian spectrum and CY topology.  
+\item Computational capacity: formulas linking capacity to Hodge numbers.  
+\item Error correction: construction of quantum codes from CY homology.  
+\item Dynamics: time as Ricci flow on CY metrics,
+\[
+\frac{\partial g_{i\bar{j}}}{\partial \tau} = - \mathrm{Ric}(g)_{i\bar{j}}.
+\]
+\end{enumerate}
+
+\section{Conclusion}
+Meta-CY Quantum Computing offers a conceptual leap 
+from qubits to manifold-based information carriers, 
+and ultimately to functional-level Meta-CYbits. 
+This framework opens a wide range of mathematical, physical, 
+and computational problems.
+
+\section*{Citation (BibTeX - EN)}
+\begin{verbatim}
+@misc{CY_meta_quantum_2025,
+  author       = {Evgeny Monakhov and LCC "VOSCOM ONLINE" Research Initiative},
+  title        = {Meta-Quantum Computing on Calabi--Yau Manifolds},
+  year         = {2025},
+  publisher    = {Zenodo},
+  doi          = {10.5281/zenodo.17050352},
+  url          = {https://doi.org/10.5281/zenodo.17050352},
+  orcid        = {0009-0003-1773-5476},
+  url_orcid    = {https://orcid.org/0009-0003-1773-5476},
+  organization = {https://voscom.online/}
+}
+\end{verbatim}
+
+\end{document}
